@@ -15,9 +15,12 @@ Este é um projeto simples para realizar sorteios de amigos secretos. A aplicaç
 2. Insira os nomes dos amigos no campo de texto e clique em "Adicionar".
 3. Após adicionar todos os nomes, clique em "Sortear Amigo" para realizar o sorteio.
 
+
+
 ## Tecnologias utilizadas
 
 - HTML
+-CSS
 - JavaScript
 
 ## Autor

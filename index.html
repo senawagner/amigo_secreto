@@ -10,10 +10,15 @@
   <title>Sorteio de Amigo Secreto</title>
 </head>
 <body>
+  <header class="header">
+        <div class="header-content">
+      <h1>Sorteio de Amigo Secreto</h1>
+      
+    </div>
+  </header>
+
   <main class="main-content">
     <header class="header-banner">
-      <h1 class="main-title">Sorteio de Amigo Secreto</h1>
-      <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto">
     </header>
     
     <section class="input-section">
@@ -22,7 +27,7 @@
         <input type="text" id="nome-amigo" class="input-name" placeholder="Digite um nome">
         <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
       </div>
-     
+      <p>Adicione os nomes dos seus amigos e sorteie quem será o amigo secreto!</p>
       <ul id="lista-amigos" class="name-list" aria-labelledby="lista-amigos" role="list"></ul>
       <p id="resultado-sorteio" class="result-list" aria-live="polite"></p>
 
@@ -34,6 +39,10 @@
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>Sorteio de Amigo Secreto - 2025 -Desenvolvido por Wagner Sena.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
