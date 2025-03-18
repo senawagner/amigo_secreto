@@ -6,43 +6,41 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  <title>Sorteio de Amigo Secreto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <title>Amigo Secreto</title>
 </head>
 <body>
-  <header class="header">
-        <div class="header-content">
-      <h1>Sorteio de Amigo Secreto</h1>
-      
+  <section class="header">
+    <div class="header-sticker">
+      <h1>Challenge Amigo Secreto</h1>
     </div>
-  </header>
+    </section>
 
-  <main class="main-content">
-    <header class="header-banner">
-    </header>
-    
-    <section class="input-section">
+  <section class="main-content">
+    <div class="input-section">
       <h2 class="section-title">Digite o nome dos seus amigos</h2>
       <div class="input-wrapper">
         <input type="text" id="nome-amigo" class="input-name" placeholder="Digite um nome">
         <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
       </div>
       <p>Adicione os nomes dos seus amigos e sorteie quem será o amigo secreto!</p>
-      <ul id="lista-amigos" class="name-list" aria-labelledby="lista-amigos" role="list"></ul>
-      <p id="resultado-sorteio" class="result-list" aria-live="polite"></p>
-
+      <ul id="lista-amigos" class="name-list"></ul>
+      
       <div class="button-container">
-        <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+        <button class="button-draw" onclick="sortearAmigo()">
           <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
           Sortear amigo
         </button>
+        <button class="button-clear" onclick="limparLista()">Limpar</button>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>Sorteio de Amigo Secreto - 2025 -Desenvolvido por Wagner Sena.</p>
-  </footer>
+      <div id="resultado-sorteio" class="result-list"></div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <p>Sorteio de Amigo Secreto - 2025 - Desenvolvido por Wagner Sena.</p>
+  </section>
 
   <script src="script.js"></script>
 </body>
