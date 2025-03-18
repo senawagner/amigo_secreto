@@ -25,4 +25,6 @@ Este é um projeto simples para realizar sorteios de amigos secretos. A aplicaç
 
 ## Autor
 
-Este projeto foi desenvolvido por Wagner Senacomo parte de um desafio de programação.
+Este projeto foi desenvolvido por Wagner Sena como parte de um desafio de programação.
+
+[Deploy](https://amigo-secreto-khaki-one.vercel.app/)
