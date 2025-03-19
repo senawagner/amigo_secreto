@@ -169,6 +169,15 @@ body::before {
     padding: 18px 0; /* Aumento de 20% na altura */
     text-align: center;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre o logo e o título */
+}
+
+.header-logo {
+    height: 40px; /* Ajuste a altura conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
 }
 
 .header-sticker h1 {
