@@ -87,13 +87,27 @@ body::before {
 }
 
 .button-add, .button-draw, .button-clear {
-    padding: 8px 15px; /* Reduzindo o padding */
+    padding: 8px 15px;
     border: none;
     cursor: pointer;
     margin: 5px;
     border-radius: 10px;
     font-size: 18px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-add:hover, .button-draw:hover, .button-clear:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 0.5s ease-in-out;
 }
 
 .button-add {
@@ -142,22 +156,74 @@ body::before {
     list-style: none;
     text-align: left;
     padding: 0;
+    border: 0.5px solid white; /* Borda mais fina */
+    border-radius: 4px;
+    width: 80%;
+    margin: 0 auto;
+    max-height: 620px; /* Aumentei a altura para exibir 15 registros */
+    overflow-y: auto;
+    background-color: transparent; /* Fundo transparente */
 }
 
 .name-list li {
-    background-color: rgba(255, 255, 255, 0.6);
     padding: 8px;
-    margin-top: 5px;
+    margin: 5px;
     border-radius: 4px;
-    color: #333; /* Cinza escuro */
-    width: 80%; /* Reduzindo a largura para 80% */
-    margin-left: auto; /* Centraliza horizontalmente */
+    color: white; /* Cor da fonte alterada para branco */
+    width: 95%;
+    margin-left: auto;
     margin-right: auto;
+    background-color: transparent; /* Fundo transparente */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .name-list {
+        width: 100%;
+    }
+
+    .name-list li {
+        width: 95%;
+    }
 }
 
 .result-list {
     margin-top: 20px;
     font-weight: bold;
+}
+
+.result-container {
+    border: 0.5px solid white;
+    border-radius: 4px;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.result-header h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.select-amigo {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.amigo-sorteado {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
 
 .header-sticker {

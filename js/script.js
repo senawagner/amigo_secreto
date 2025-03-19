@@ -51,13 +51,6 @@ function sortearAmigo() {
   });
 
   exibirResultado(resultado);
-
-  // Efeito de confete
-  confetti({
-    particleCount: 100,
-    spread: 70,
-    origin: { y: 0.6 }
-  });
 }
 
 // Função para embaralhar um array (algoritmo Fisher-Yates)
@@ -71,14 +64,33 @@ function embaralharArray(array) {
 
 // Exibir o resultado do sorteio
 function exibirResultado(resultado) {
-  const resultadoDiv = document.getElementById("resultado-sorteio");
-  resultadoDiv.innerHTML = "<h3>Resultado do Sorteio:</h3>";
+    const selectAmigo = document.getElementById('selecionar-amigo');
+    const amigoSorteadoDiv = document.getElementById('amigo-sorteado');
 
-  Object.entries(resultado).forEach(([amigo, sorteado]) => {
-    const p = document.createElement("p");
-    p.textContent = `${amigo} → ${sorteado}`;
-    resultadoDiv.appendChild(p);
-  });
+    // Limpa o select e adiciona as opções
+    selectAmigo.innerHTML = '<option value="">Selecione um amigo</option>';
+    for (const amigo of Object.keys(resultado)) {
+        const option = document.createElement('option');
+        option.value = amigo;
+        option.textContent = amigo;
+        selectAmigo.appendChild(option);
+    }
+
+    // Atualiza o amigo sorteado ao selecionar
+    selectAmigo.addEventListener('change', () => {
+        const selecionado = selectAmigo.value;
+        if (selecionado) {
+            amigoSorteadoDiv.textContent = `Amigo sorteado: ${resultado[selecionado]}`;
+            // Efeito de confete
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        } else {
+            amigoSorteadoDiv.textContent = '';
+        }
+    });
 }
 
 // Limpar a lista de amigos

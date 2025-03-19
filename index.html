@@ -36,7 +36,17 @@
         <button class="button-clear" onclick="limparLista()">Limpar</button>
       </div>
 
-      <div id="resultado-sorteio" class="result-list"></div>
+      <div id="resultado-sorteio" class="result-container">
+        <div class="result-header">
+          <h3>Resultado do Sorteio</h3>
+        </div>
+        <div class="result-content">
+          <select id="selecionar-amigo" class="select-amigo">
+            <option value="">Selecione um amigo</option>
+          </select>
+          <div id="amigo-sorteado" class="amigo-sorteado"></div>
+        </div>
+      </div>
     </div>
   </section>
 
