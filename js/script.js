@@ -51,6 +51,13 @@ function sortearAmigo() {
   });
 
   exibirResultado(resultado);
+
+  // Efeito de confete
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
 }
 
 // Função para embaralhar um array (algoritmo Fisher-Yates)
